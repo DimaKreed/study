@@ -41,4 +41,5 @@ function isSomeWordsInStringEqual(str1,str2,n) {
   }
     return equal;
 }
+
 console.log(isSomeWordsInStringEqual('hi i am dima','hi i am denis',10));
