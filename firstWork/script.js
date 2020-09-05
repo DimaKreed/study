@@ -9,9 +9,6 @@ function isPalindrom(num) {
  return String(num)===String(num).split('').reverse().join('');
 }
 
-console.log(isPalindrom(1234));
-console.log(isPalindrom(1234321));
-
 //Знайти найбільший елемент в одновимірному числовому масиві.
 function maxElemInArray(arr) {
   return Math.max(...arr);
@@ -29,8 +26,8 @@ function sumOfPositiveNums(arr1,arr2) {
   return sum
 }
 
-console.log(sumOfPositiveNums([1,2,0,-5],[3,5,-8,10]));
 
+//Дано два рядки.  Надрукувати результат рівності перших n символів.
 function isSomeWordsInStringEqual(str1,str2,n) {
     let arr1=str1.split('');
     let arr2=str2.split('');
@@ -42,4 +39,3 @@ function isSomeWordsInStringEqual(str1,str2,n) {
     return equal;
 }
 
-console.log(isSomeWordsInStringEqual('hi i am dima','hi i am denis',10));
