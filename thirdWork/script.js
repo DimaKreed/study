@@ -31,11 +31,11 @@ calculate(){
 }
 }
 
-// let t=new multiplicationTable(6);
-// t.calculate();
-//
-// let t1=new multiplicationTable(2);
-// t1.calculate();
+let t=new multiplicationTable(6);
+t.calculate();
+
+let t1=new multiplicationTable(2);
+t1.calculate();
 
 //2.	Створіть клас країни в якому будуть поля:
 // назва країни, населення і назва столиці (англійські назви придумайте самостійно).
@@ -84,6 +84,23 @@ for (const country of arrOfCountries) {
   tr3.append(td_3);
 }
 table.appendChild(tr1);table.appendChild(tr2);table.appendChild(tr3);
-document.body.appendChild(table)
+document.body.appendChild(table);
+  document.body.appendChild(document.createElement("br"));
 
 //3.	Створіть клас користувача, з полями: прізвище, ім'я, вік і e-mail.
+//4.	У HTML формі користувач вводить в чотири різні поля: прізвище, ім'я, вік і e-mail.
+// Після натискання клавіші кнопки ГОТОВО створюється об'єкт користувача, з методом,
+// який вносить ці дані в поле об'єкту і далі виводить їх використовуючи другий метод класу користувача.
+//5.	У формі передбачити перевірку, що всі поля перед відправленням не порожні.
+class User {
+  constructor(name,surname,age,eMail) {
+    this.name=name;
+    this.surname=surname;
+    this.age=age;
+    this.eMail=eMail;
+  }
+
+  writeUserInfo(){
+    console.log()
+  }
+}
