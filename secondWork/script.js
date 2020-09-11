@@ -9,7 +9,8 @@ function numOfDigitsAndSum(num) {
     }
     return [numOfDigits,sum];
 }
-
+let first=document.getElementById('1');
+first.innerText='1. 121231231 numOfDigits: '+numOfDigitsAndSum(121231231)[0]+' sumOfDigits: '+numOfDigitsAndSum(121231231)[1];
 //Розрахувати колір сигналу світлофора. 
 // Опис: Робота світлофора запрограмована таким чином: з початку кожної години, 
 // протягом трьох хвилин горить зелений сигнал, наступні дві хвилини горить червоний, 
@@ -18,13 +19,14 @@ function numOfDigitsAndSum(num) {
  function colorOfTrafficLights(minutes) {
     return (minutes%5>2)?'red':'green';
  }
+ let second=document.getElementById('2');
+ second.innerText='2.  55min:'+ colorOfTrafficLights(55)+ ' 23min:' + colorOfTrafficLights(23);
 
 //Дано текст і "слово", виділити червоним слова в тексті які містять в собі "слово".
 // Наприклад: Дано слово "майстр" і текст "MasterWebs - Форум веб-майстрів"
 function makeFindedTextRed() {
   let input=document.getElementById('input').value ;
   let text=document.getElementById('text');
-  console.log(text.innerHTML)
   text.innerHTML=text.innerHTML.replace(`${input}`,`<span>${input}</span>`);
 }
 //Написати лічильник відкриття для однієї сторінки.
@@ -50,61 +52,16 @@ function refreshPage10Times(){
     window.name='';d0=d;i=1;
   }
   window.name=(d+","+d0+","+a+","+i);
-  console.log(i+'d');
 
-
-  document.write('<br><a href="data:text/plain;charset=utf-8,%EF%BB%BF' + encodeURIComponent(i) + '" download="text.txt">Кількість оновлень сторінки.txt</a>')
+let fourth=document.getElementById('4');
+  fourth.innerHTML+='<br><a href="data:text/plain;charset=utf-8,%EF%BB%BF' + encodeURIComponent(i) + '" download="text.txt">Кількість оновлень сторінки.txt</a>';
 }
-//Реалізувати шифрування тексту шляхом заміни букв один одним (напр. A => B, B => X, і т.д).
-// Кожна літера може представляти тільки одну іншу літеру.
-// Написати три функції - перша генерує ключ у вигляді нового алфавіту.
-// Друга шифрує заданий текст по заданому ключу.
-// Третя розшифровує заданий зашифрований текст по заданому ключу.
+refreshPage10Times();
 
-
-function makeRandomArr(a, b) {
-  return Math.random() - 0.5;
-}
-
-function randomKeyAlphabet(arr_en){
-  let arr_en_random=JSON.parse(JSON.stringify(arr_en)).sort(makeRandomArr);
-  return arr_en_random;
-}
-
-function cryptString(arr_en,string){
-  let arr_en_random=randomKeyAlphabet(arr_en);
-
-  let changedString=[];
-
-  for (let i = 0; i < arr_en.length; i++) {
-    for (let j = 0; j < string.length; j++) {
-      if (string[j].toLowerCase() === arr_en[i]) {
-        changedString[j] = arr_en_random[i];
-      }
-      if(string[j]===' ')changedString[j]=' ';
-    }
-  }
- changedString=changedString.join('');
- console.log('string crypted: '+changedString);
-  return [changedString,arr_en,arr_en_random];
-}
-
-function decryptString(changedString,arr_en,arr_en_random){
-
-let decryptedString=[];
-  for (let i = 0; i < arr_en.length; i++) {
-    for (let j = 0; j < changedString.length; j++) {
-      if (changedString[j].toLowerCase() === arr_en_random[i]) {
-        decryptedString[j] = arr_en[i];
-      }
-      if(changedString[j]===' ')decryptedString[j]=' ';
-    }
-  }
-  decryptedString=decryptedString.join('');
-  console.log('string decrypted: '+decryptedString);
- // return [changedString,arr_en,arr_en_random];
-}
+z
 
 let arr_en = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 let [changedString,,arr_en_random]=cryptString(arr_en,'hi i am Dima');
-decryptString(changedString,arr_en,arr_en_random);
+let decryptedString=decryptString(changedString,arr_en,arr_en_random);
+let fifth=document.getElementById('5');
+fifth.innerText=`5. My string is 'hi i am dima'. Crypted string is '${changedString}'. Decrypted string is '${decryptedString}'`;
