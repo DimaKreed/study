@@ -99,8 +99,6 @@ console.log(copiedStudents);
     }
   return password;
 
-
-
 }
 
 console.log(createPassword());
