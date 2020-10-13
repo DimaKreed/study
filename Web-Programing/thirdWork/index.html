@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3 hometask</title>
+</head>
+<body>
+<div id="multi"></div>
+<div id="table"></div>
+
+<form name="myForm" onsubmit="return validateForm()">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="surname" name="surname">
+    <input type="number" placeholder="age" name="age">
+    <input type="text" placeholder="e-mail" name="eMail">
+    <input type="submit" onclick="createObj()" value="Submit">
+</form><button onclick="createObj()">press</button>
+
+
+<form action="" name="calc">
+    <h1>Calculator</h1>
+    <input type="number" name="num1" placeholder="number1">
+    <select name="select" id="">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+        <option value="%">%</option>
+        <option value="^">^</option>
+        <option value="√">√</option>
+    </select>
+    <input type="number" name="num2" placeholder="number2">
+    <input type="text" placeholder="="  disabled style="width: 7px;">
+    <input type="text" placeholder="output" name="output" disabled>
+</form>
+<button onclick="display()">Calculate</button>
+
+
+<div class="game">
+    <div class="game-title" contenteditable="true">Tic Tac Toe</div>
+    <div class="player" contenteditable="true">
+        Player 1
+        <div style="font-size:30pt;" id="player1" class="selected" contenteditable="true">
+            0
+        </div>
+    </div>
+
+    <table id="game" class="tictactoe" style="float:left;width:45%;" contenteditable="true">
+    </table>
+
+    <div class="player" contenteditable="true">
+        Player 2
+        <div id="player2" style="font-size:30pt;" contenteditable="true">0</div>
+    </div>
+
+    <div class="clear" contenteditable="true"></div>
+</div>
+
+
+
+
+<script src="script.js " ></script>
+</body>
+</html>
+
+<style>
+
+    td{
+        border-style: solid;
+        border-color: black;
+        border-width: 0 1px 1px 0;
+    }
+    .orange{
+        background-color: coral;
+    }
+
+
+    .game td
+    {
+        width:100px;
+        height:100px;
+        border: solid 5px black;
+        text-align:center;
+        font-size:40pt;
+        border-radius:10px;
+        box-sizing:border-box;
+    }
+
+    .game td:hover
+    {
+        background-color: #fff;
+        cursor:pointer;
+    }
+
+    .game
+    {
+        background:#efefef;
+        border:solid 10px #333;
+    }
+
+    .game .game-title
+    {
+        background:#222;
+        color:#fff;
+        padding: 10px;
+        text-align:center;
+    }
+
+    .game .player
+    {
+        float:left;
+        text-align:center;
+        width: 25%;
+    }
+
+    .game .player .selected
+    {
+        border-bottom:solid 4px #00fa9a;
+    }
+
+    .tictactoe-board
+    {
+        text-align:center;
+        margin:0 auto;
+        width:50%;
+        padding-top:20px;
+    }
+
+    .tictactoe-board table
+    {
+        float:left;
+        width: 50%;
+    }
+
+    .tictactoe-board-score1
+    {
+        float:left;
+        width:20%;
+    }
+
+    .tictactoe-board-score2
+    {
+        float:left;
+        width:20%;
+    }
+
+    .clear
+    {
+        clear:both;
+    }
+</style>
