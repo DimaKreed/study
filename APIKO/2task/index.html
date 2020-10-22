@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2TASK APIKO</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<form action="" name="loginForm" onsubmit="submit()">
+    <div id="emailDiv">
+        <label for="email"><b>E-mail</b></label><br>
+        <input type="email"
+               placeholder="Enter E-mail"
+               name="email"
+               id="email"
+               required
+               onchange="checkEmail()">
+        <p id="invalidEmail" >Invalid E-mail</p>
+    </div>
+    <div id="passwordDiv">
+        <label for="password"><b>Password</b></label><br>
+        <input type="password"
+               placeholder="Enter password"
+               name="password"
+               id="password"
+               required
+               onchange="checkPassword()">
+        <p id="invalidPassword" >Invalid password(at least 8 symbols)</p>
+    </div>
+
+
+    <button type="submit">Login</button>
+</form>
+</body>
+<script src="script/script.js"></script>
+</html>

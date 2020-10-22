@@ -1,0 +1,43 @@
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=email], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #24292e;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+label{
+    margin-left: 20px;
+    font-family: "Agency FB";
+font-size: 20px;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:valid {
+    border: 2px solid black;
+}
+
+#invalidEmail,#invalidPassword{
+    visibility: hidden;
+    margin: 0;
+    font-family: "Agency FB";
+    color: red;
+}
