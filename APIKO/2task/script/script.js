@@ -42,13 +42,17 @@ else p.style.visibility='hidden';
 function checkPassword() {
   const divElement=document.getElementById('passwordDiv');
 
-  const email=document.getElementById('password');
+  const password=document.getElementById('password');
   const p=document.getElementById('invalidPassword');
 
 
-  if(!email.checkValidity()||email.value.length<8)
-    p.style.visibility='visible';
-  else p.style.visibility='hidden';
+  if(!password.checkValidity()||password.value.length<8)
+    setTimeout(
+      p.style.visibility='visible',500
+    )
+  else setTimeout(
+    p.style.visibility='hidden',500
+  )
 }
 
 function submit() {
